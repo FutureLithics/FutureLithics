@@ -9,7 +9,7 @@ const links = [
     title: "Upwork",
   },
   {
-    path: "https://github.com/ToccataN",
+    path: "https://github.com/FutureLithics",
     title: "Github",
   },
   {
@@ -51,9 +51,9 @@ const ContactSection = () => {
           <div className="section col-md-5 py-4 px-3 mt-4">
             <h3 className="mb-4">Schedule a Consultation</h3>
             <p className="mb-2">
-              Future Lithics <br />
+              Future Lithics LLC<br />
               Chad R. Denaux <br />
-              Greenville, SC
+              Seneca, SC
             </p>
             <h5 className="mt-4">Information</h5>
             <ul>

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-import BarChartComponent from "../../charts/BarChart";
-import BandedBarComponent from "../../charts/BandedBarChart";
-import StackedBarComponent from "../../charts/StackedBarChart";
+import {
+	BarChartComponent,
+	BandedBarComponent,
+	StackedBarComponent
+} from '../../charts/bar';
 
 import DesktopTable from "../../tables/DesktopTable";
 import MobileTable from "../../tables/MobileTable";

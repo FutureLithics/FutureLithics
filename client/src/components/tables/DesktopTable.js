@@ -13,21 +13,21 @@ const DoubleCategory = (props) => {
   for (let d = 0; d < data.length; d++) {
     const datum = data[d];
 
-    if (Object.keys(dataTable).includes(datum.x)) {
-      if (Object.keys(dataTable[datum.x]).includes(datum.x2)) {
-        dataTable[datum.x][datum.x2].push(datum.y);
-      } else {
-        let key = datum.x2;
-        dataTable[datum.x][key] = [datum.y];
-      }
-    } else {
-      let key = datum.x2;
-      dataTable[datum.x] = {};
-      dataTable[datum.x][key] = [datum.y];
-    }
-  }
+		if(Object.keys(dataTable).includes(datum.x)){
+			if(Object.keys(dataTable[datum.x]).includes(datum.x2)){
+				dataTable[datum.x][datum.x2].push(datum.y);
+			} else {
+				let key = datum.x2;
+				dataTable[datum.x][key] = [datum.y];
+			}			
+		} else {
+			let key = datum.x2;
+			dataTable[datum.x] = {};
+			dataTable[datum.x][key] = [datum.y];
+		}
+	}
 
-  let rows = 0;
+	let rows = 0;
 
   for (let header in dataTable) {
     const main = dataTable[header];
@@ -147,18 +147,17 @@ SingleCategory.propTypes = {
 };
 
 const DesktopTable = (props) => {
-  const { data, type } = props;
+	
+	const { data, type } = props;
 
-  return (
-    <div className="desktop-table-container">
-      {type == "single" ? (
-        <SingleCategory data={data} />
-      ) : (
-        <DoubleCategory data={data} />
-      )}
-    </div>
-  );
-};
+	return (
+		<div className="desktop-table-container">
+		{
+			type == 'single' ? <SingleCategory  data={data} /> : <DoubleCategory  data={data} />
+		}
+		</div>
+	)
+}
 
 DesktopTable.propTypes = {
   data: PropTypes.any,
