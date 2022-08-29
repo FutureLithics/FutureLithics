@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import BarChartInterface from '../../components/pages/ChartPages/BarChartInterface';
 import LineChartInterface from '../../components/pages/ChartPages/LineChartInterface';
+import PieChartInterface from '../../components/pages/ChartPages/PieChartInterface';
 
 import barChartData from '../../data/barChartData';
 import lineChartData from '../../data/lineChartData';
@@ -14,6 +15,8 @@ const chartSwitch = (chart, info) => {
 			return (<BarChartInterface info={info} data={barChartData} />);
 		case 'line-chart':
 			return (<LineChartInterface info={info} data={[...lineChartData]} />);
+    case 'pie-chart':
+      return (<PieChartInterface info={info} data={[...lineChartData]} />);
 		default:
 			return (<BarChartInterface info={info} data={barChartData} />);
 	}

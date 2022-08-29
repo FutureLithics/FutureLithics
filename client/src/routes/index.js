@@ -85,6 +85,21 @@ const cardRoutes = [
             path: "/data-viz/chart-card/line-chart",
             type: "page",
             level: 3,
+          },
+          {
+            name: "pie_chart",
+            title: "Pie Chart",
+            component: ChartPage,
+            chart: 'pie-chart',
+            image: {
+              src: linechart,
+              alt: "Placeholder",
+            },
+            description:
+              "Customizable pie and donut chart.",
+            path: "/data-viz/chart-card/pie-chart",
+            type: "page",
+            level: 3,
           }          
         ]
       },
