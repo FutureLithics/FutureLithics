@@ -13,6 +13,9 @@ class PieChart extends BaseChart {
 		this.colorFxn = d3.scaleOrdinal(d3[`scheme${options.colorScheme.scheme}`]);
 		this.createTooltip();
 		this.radius = Math.min(this.height, this.width) / 2;
+		this.cornerRadius = 0;
+		this.padAngle = 0;
+		this.data = null;
 
 		this.duration = 1000;
 	}
@@ -53,12 +56,19 @@ class PieChart extends BaseChart {
 
   }
 
+  midAngle(d) {
+    return d.startAngle + (d.endAngle - d.startAngle) / 2;
+  }
+
   displayData(data){
   	this.mainGroup.attr('transform', null)
   	this.mainGroup.attr('transform', `translate(${this.width/2}, ${this.height/2})`)
 
+  	this.data = data;
+
   	this.pie = d3.pie()
-  	  .value((d) => d.percentage)(data);
+  	  .value((d) => d.percentage)
+  	  .padAngle(this.padAngle)(this.data);
 		
   	this.setScalesAndAxis();
   	this.setInitialAreas(data);
@@ -68,6 +78,11 @@ class PieChart extends BaseChart {
   	this.arc = d3.arc()
   	  .innerRadius(this.radius * this.innerRadius)
   	  .outerRadius(this.radius * this.outerRadius)
+  	  .cornerRadius(this.cornerRadius);
+
+  	this.outerArc = d3.arc()
+  	  .innerRadius(this.radius * (this.outerRadius + 0.1) )
+  	  .outerRadius(this.radius * (this.outerRadius + 0.1) );
   }
 
   setInitialAreas(data){
@@ -76,6 +91,17 @@ class PieChart extends BaseChart {
   	  .data(this.pie)
   	  .enter()
   	  .append('path');
+
+  	this.lineGroup = this.mainGroup
+  	  .selectAll('.lines')
+  	  .data(this.pie)
+  	  .enter()
+
+  	this.labelGroup = this.mainGroup
+  	  .selectAll('.labels')
+  	  .data(this.pie)
+  	  .enter()
+  	 
   }
 
   updateOptions(options){
@@ -91,16 +117,70 @@ class PieChart extends BaseChart {
   	this.updateChart();
   }
 
+  updateOuterRadius(radius){
+  	this.outerRadius = radius;
+  	this.setScalesAndAxis();
+
+  	this.updateChart();
+  }
+
+  updateCornerRadius(radius){
+  	this.cornerRadius = Number(radius);
+  	this.setScalesAndAxis();
+
+  	this.updateChart();
+  }
+
+  addTextLabels(d){
+  	const outerCentroid = this.outerArc.centroid(d);
+  	const ascender = this.midAngle(d) < Math.PI ? 25 : -125;
+  	const pos = [outerCentroid[0] + ascender, outerCentroid[1] - 13];
+
+  	return pos;
+  }
+
+  drawLines(d){
+  	const centroid = this.arc.centroid(d);
+  	const outerCentroid = this.outerArc.centroid(d)
+  	const ascender = this.midAngle(d) < Math.PI ? 25 : -25;
+  	const tail = [outerCentroid[0] + ascender, outerCentroid[1]];
+
+  	return `M ${centroid.join(' ')} L ${outerCentroid.join(' ')} L ${tail.join(' ')}`;
+  }
+
   updateChart(){
   	if(this.pieGroup == undefined){
   		return;
   	}
 
+  	this.lineGroup.selectAll(".lines").remove();
+  	this.labelGroup.selectAll(".labels").remove();
+
     this.pieGroup.attr('d', this.arc )
 		  .attr('fill', d => this.colorFxn(d.data.sector))
-		  .attr("stroke", "black")
+		  .attr("class", "text-secondary")
 		  .style("stroke-width", "2px")
 		  .style("opacity", 0.7)
+
+		this.lineGroup
+		  .append('path')
+		  .attr("class", "text-secondary lines")
+		  .attr("fill", 'transparent')
+		  .attr('stroke', '#F8BA42')
+		  .style("stroke-width", "1px")
+		  .attr('d', (d) =>  this.drawLines(d) )
+
+		this.labelGroup
+		  .append('foreignObject')
+		  .attr('width', '100px')
+		  .attr("height", '26px')		  
+		  .attr('x', d => this.addTextLabels(d)[0])
+		  .attr('y', d => this.addTextLabels(d)[1])
+		  .append("xhtml:div")
+		  .attr("class", "text-primary labels")
+		  .html(d => `<p class="m-0 p-0 ${this.midAngle(d) < Math.PI ? "text-start" : "text-end"}">${d.data.sector}</p>`)
+
+
   }
 }
 
@@ -139,7 +219,7 @@ let chart = null;
 
 const PieChartComponent = (props) => {
 
-	const { data, options, radius } = props;
+	const { data, options, radius, radiusOuter, cornerRadius } = props;
 
 	const defaultOptions = {
     containerId: "pie-chart",
@@ -177,6 +257,18 @@ const PieChartComponent = (props) => {
   	resetChart(chart);
   }, [radius])
 
+  useEffect(()=>{
+  	chart && chart.updateOuterRadius(radiusOuter);
+  	const newChart = chart;
+  	resetChart(chart);
+  }, [radiusOuter])
+
+  useEffect(()=>{
+  	chart && chart.updateCornerRadius(cornerRadius);
+  	const newChart = chart;
+  	resetChart(chart);
+  }, [cornerRadius])
+
   const resetChart = (newChart) => {
   	chart = newChart;
   }
@@ -191,7 +283,9 @@ const PieChartComponent = (props) => {
 PieChartComponent.propTypes = {
 	data: PropTypes.any,
 	options: PropTypes.any,
-	radius: PropTypes.any
+	radius: PropTypes.any,
+	radiusOuter:PropTypes.any,
+	cornerRadius: PropTypes.any
 }
 
 export default PieChartComponent;

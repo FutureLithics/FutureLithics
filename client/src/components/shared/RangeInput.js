@@ -16,21 +16,26 @@ const RangeInput = (props) => {
     el.style.setProperty("--min", el.min === "" ? "0" : el.min);
     el.style.setProperty("--max", el.max === "" ? "100" : el.max);
 
-    handler(e.target.value)
+    handler(e.target.value, options.inner)
   };
 
   return (
-    <div className="range-input p-1">
-      <input
-        type="range"
-        className="range-input-element"
-        min={options.minValue}
-        max={options.maxValue}
-        step={options.step}
-        onChange={(e) => onChangeFunction(e)}
-        value={value}
-        style={styles}
-      />
+    <div>
+      <div>
+        <p className="mb-0 text-secondary pe-4">{options.label}</p>
+      </div>
+      <div className="range-input p-1">
+        <input
+          type="range"
+          className="range-input-element"
+          min={options.minValue}
+          max={options.maxValue}
+          step={options.step}
+          onChange={(e) => onChangeFunction(e)}
+          value={value}
+          style={styles}
+        />
+      </div>
     </div>
   );
 };

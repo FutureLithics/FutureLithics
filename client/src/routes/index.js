@@ -15,6 +15,7 @@ import globalConflict from "../assets/images/globalConflict.jpg";
 import figmaMockup from "../assets/images/FigmaMockup.jpg";
 import barCharts from "../assets/images/barCharts.png";
 import linechart from "../assets/images/linechart.jpg";
+import piechart from "../assets/images/pie-chart.jpg";
 
 const basicRoutes = [
   {
@@ -92,8 +93,8 @@ const cardRoutes = [
             component: ChartPage,
             chart: 'pie-chart',
             image: {
-              src: linechart,
-              alt: "Placeholder",
+              src: piechart,
+              alt: "Pie and Donut Charts",
             },
             description:
               "Customizable pie and donut chart.",
