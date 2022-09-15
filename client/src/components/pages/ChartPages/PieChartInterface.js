@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import {
 	PieChartComponent
@@ -49,8 +51,9 @@ const ControlDrawer = ({
 
 	return (
     <Dropdown isOpen={open} toggle={toggle} className="control-drawer">
-      <DropdownToggle caret>
-        Controls {' '}
+      <DropdownToggle>
+        Controls
+        <FontAwesomeIcon icon={faChevronDown} />
       </DropdownToggle>
       <DropdownMenu right className="dropdown-control-drawer">
         {children}
@@ -121,7 +124,7 @@ const PieChartInterface = (props) => {
 					<div className="col-md-3 py-2">
 				  	  <SelectInput options={options.colorScheme} value={colorScheme.value} handler={colorSetter} />
 				  </div>
-				  <div className="col-md-2 py-2">
+				  <div className="col-md-3 py-2">
 					  <ControlDrawer>
 						  <div className="py-2">
 						  	<RangeInput options={sliders.radial} value={radialSlider} handler={radialSetter} />

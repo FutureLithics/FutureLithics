@@ -406,6 +406,7 @@ input[type="range"] {
 }
 
 .control-drawer {
+	width: 100%;
 	display: flex;
 	justify-content: end;
 
@@ -420,16 +421,26 @@ input[type="range"] {
 	}
 
 	button.btn-secondary {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
 		background-color: $fineash;
 		color: $secondary;
 		border: none;
 		padding: 0.25rem;
 		right: 0;
 		border-radius: 10px;
+
+		.svg-inline--fa.fa-w-14 {
+			font-size: 12px;
+			width: 1em;
+			font-weight: 100;
+		}
 	}
 
 	div.dropdown-control-drawer{
-		background-color: $fineash !important;
+		background-color: #282621 !important;
 		padding: 0.5em;
 	}
 }
