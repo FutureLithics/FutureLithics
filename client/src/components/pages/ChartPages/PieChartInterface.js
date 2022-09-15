@@ -53,7 +53,7 @@ const ControlDrawer = ({
     <Dropdown isOpen={open} toggle={toggle} className="control-drawer">
       <DropdownToggle>
         Controls
-        <FontAwesomeIcon icon={faChevronDown} />
+        <i className="chevron"></i>
       </DropdownToggle>
       <DropdownMenu right className="dropdown-control-drawer">
         {children}

@@ -444,3 +444,23 @@ input[type="range"] {
 		padding: 0.5em;
 	}
 }
+
+.chevron {
+    position:relative;
+    display:block;
+    height:6px; /*Height should be double border thickness*/
+}
+
+.chevron::after {
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  border-bottom: 0.1em solid $secondary;
+  border-right: 0.1em solid $secondary;
+  top: -1px;
+  right: 0.1em;
+  height: 7px;
+  width: 7px;
+  transform: rotate(45deg);
+}
+
