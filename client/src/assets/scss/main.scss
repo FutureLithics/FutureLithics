@@ -364,3 +364,72 @@ button.close{
 	background-color: $primary;
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 10rem;
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 10px + var(--ratio) * (100% - 10px));
+
+  &::-webkit-slider-runnable-track {
+  	-webkit-appearance: none;
+  	height: 0.7em;
+  	border-radius: 0.5rem;
+  	color: transparent;
+  	accent-color: #053a5f;
+  	backgorund: $fineash;
+	  background: linear-gradient($primary, $primary) 0/var(--sx) 100% no-repeat, $fineash;
+	}
+
+	&::-moz-range-track {
+		-moz-appearance: none;
+		height: 0.7em;
+		border-radius: 0.5rem;
+		color: transparent;
+		accent-color: #053a5f;
+	  background: $fineash;
+	}
+
+	&::-webkit-slider-thumb{
+		-webkit-appearance: none;
+		margin-top: -0.15em;
+		width: 1em;
+		height: 1em;
+		background-color: $primary_data;
+
+		border: 1px solid $primary_data;
+		border-radius: 1rem;
+	} 
+}
+
+.control-drawer {
+	display: flex;
+	justify-content: end;
+
+	&.show > button.btn-secondary.dropdown-toggle {
+		background-color: $fineash;
+		color: $secondary;
+		box-shadow: none;
+	}
+
+	button.btn-secondary:focus{
+		box-shadow: none;
+	}
+
+	button.btn-secondary {
+		background-color: $fineash;
+		color: $secondary;
+		border: none;
+		padding: 0.25rem;
+		right: 0;
+		border-radius: 10px;
+	}
+
+	div.dropdown-control-drawer{
+		background-color: $fineash !important;
+		padding: 0.5em;
+	}
+}

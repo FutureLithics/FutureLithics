@@ -15,6 +15,7 @@ import globalConflict from "../assets/images/globalConflict.jpg";
 import figmaMockup from "../assets/images/FigmaMockup.jpg";
 import barCharts from "../assets/images/barCharts.png";
 import linechart from "../assets/images/linechart.jpg";
+import piechart from "../assets/images/pie-chart.jpg";
 
 const basicRoutes = [
   {
@@ -83,6 +84,21 @@ const cardRoutes = [
             description:
               "Customizable line and area charts featuring different curve functions.",
             path: "/data-viz/chart-card/line-chart",
+            type: "page",
+            level: 3,
+          },
+          {
+            name: "pie_chart",
+            title: "Pie Chart",
+            component: ChartPage,
+            chart: 'pie-chart',
+            image: {
+              src: piechart,
+              alt: "Pie and Donut Charts",
+            },
+            description:
+              "Customizable pie and donut chart.",
+            path: "/data-viz/chart-card/pie-chart",
             type: "page",
             level: 3,
           }          
