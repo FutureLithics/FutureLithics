@@ -1,8 +1,8 @@
-# Express-React Scaffold
+# Future Lithics Main Site
 
-node v-12.18.4
+node v-16.20.2
 
-### This is a basic Node-React Application Scaffold for streamlining project setup.
+### This project is built on the React-Express Scaffold I put together
 
 #### Env setup
 
@@ -20,7 +20,7 @@ DB_USERNAME=username
 ```
 
 #### Sequelize db setup
-
+  
 ##### Contains User model with basic JWT authentication strategy
 
 ###### Set up instructions:
