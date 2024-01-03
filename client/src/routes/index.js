@@ -76,7 +76,7 @@ const cardRoutes = [
             name: "line_chart",
             title: "Line Chart",
             component: ChartPage,
-            chart: 'line-chart',
+            chart: "line-chart",
             image: {
               src: linechart,
               alt: "Placeholder",
@@ -91,18 +91,17 @@ const cardRoutes = [
             name: "pie_chart",
             title: "Pie Chart",
             component: ChartPage,
-            chart: 'pie-chart',
+            chart: "pie-chart",
             image: {
               src: piechart,
               alt: "Pie and Donut Charts",
             },
-            description:
-              "Customizable pie and donut chart.",
+            description: "Customizable pie and donut chart.",
             path: "/data-viz/chart-card/pie-chart",
             type: "page",
             level: 3,
-          }          
-        ]
+          },
+        ],
       },
       {
         name: "tableau",

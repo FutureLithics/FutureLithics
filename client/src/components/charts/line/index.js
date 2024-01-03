@@ -1,7 +1,4 @@
-import LineChartComponent from './LineChartComponent';
-import AreaChartComponent from './AreaChartComponent';
+import LineChartComponent from "./LineChartComponent";
+import AreaChartComponent from "./AreaChartComponent";
 
-export {
-	LineChartComponent,
-	AreaChartComponent
-}
+export { LineChartComponent, AreaChartComponent };

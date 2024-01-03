@@ -4,13 +4,13 @@
   }
   @-moz-keyframes #{$animation_name} {
     @content;
-  }  
+  }
   @-ms-keyframes #{$animation_name} {
     @content;
   }
   @-o-keyframes #{$animation_name} {
     @content;
-  }  
+  }
   @keyframes #{$animation_name} {
     @content;
   }
@@ -21,16 +21,16 @@
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
 
 @include keyframes(spin-enlarge) {
-  from { 
+  from {
     width: 0%;
     height: 0%;
     transform: rotate(-360deg);
   }
-  to { 
+  to {
     width: 75%;
     height: 75%;
     transform: rotate(360deg);
@@ -38,28 +38,28 @@
 }
 
 @include keyframes(translate-bg) {
-  0% { 
-    transform: translate(-20%,0)rotate(270deg);
+  0% {
+    transform: translate(-20%, 0) rotate(270deg);
   }
-  20% { 
-    transform: translate(20%,-20%)rotate(180deg);
+  20% {
+    transform: translate(20%, -20%) rotate(180deg);
   }
-  40% { 
-    transform: translate(20%,0)rotate(270deg);
+  40% {
+    transform: translate(20%, 0) rotate(270deg);
   }
-  60% { 
-    transform: translate(20%,20%)rotate(360deg);
+  60% {
+    transform: translate(20%, 20%) rotate(360deg);
   }
-  80% { 
-    transform: translate(0,0)rotate(390deg);
+  80% {
+    transform: translate(0, 0) rotate(390deg);
   }
 }
 
 @include keyframes(fade-in) {
-  from { 
+  from {
     opacity: 0;
   }
-  to { 
+  to {
     opacity: 1;
   }
 }
@@ -81,4 +81,3 @@
     transform: rotate(0deg);
   }
 }
-

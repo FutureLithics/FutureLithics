@@ -7,8 +7,8 @@ const RangeInput = (props) => {
   const styles = {
     "--value": value,
     "--min": options.minValue,
-    "--max": options.maxValue
-  }
+    "--max": options.maxValue,
+  };
 
   const onChangeFunction = (e) => {
     const el = e.target;
@@ -16,7 +16,7 @@ const RangeInput = (props) => {
     el.style.setProperty("--min", el.min === "" ? "0" : el.min);
     el.style.setProperty("--max", el.max === "" ? "100" : el.max);
 
-    handler(e.target.value, options.inner)
+    handler(e.target.value, options.inner);
   };
 
   return (

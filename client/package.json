@@ -12,6 +12,8 @@
     "bootstrap": "^5.1.0",
     "d3": "^7.0.0",
     "dot-env": "^0.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
     "font-awesome": "^4.7.0",
     "http-proxy-middleware": "^1.0.5",
     "node-sass": "4.14.1",
@@ -33,11 +35,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3010 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "formatter": "eslint src/**/*.js --fix && yarn prettier --write src/**/*.js"
+    "formatter": "eslint src/**/*.js --fix && prettier . --write"
   },
   "eslintConfig": {
     "extends": [
