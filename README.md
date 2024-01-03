@@ -15,12 +15,12 @@ secretOrKey=1234xxxx
 DB_HOST=host
 DB_PORT=port
 DB_NAME=db_name
-DB_PASSWORD=password 
+DB_PASSWORD=password
 DB_USERNAME=username
 ```
 
 #### Sequelize db setup
-  
+
 ##### Contains User model with basic JWT authentication strategy
 
 ###### Set up instructions:

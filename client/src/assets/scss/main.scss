@@ -1,4 +1,4 @@
-@import './animations.scss';
+@import "./animations.scss";
 
 .nav-item .nav-link.active {
   color: $secondary;
@@ -25,18 +25,19 @@ a {
 }
 
 .ash-container {
-	background-color: $darkash;
-	border-radius: 20px;
+  background-color: $darkash;
+  border-radius: 20px;
 }
 
-.desktop-nav .dropdown-menu,.desktop-nav .dropdown-menu .dropdown-item{
-	background-color: $base;
-	color: $primary;
+.desktop-nav .dropdown-menu,
+.desktop-nav .dropdown-menu .dropdown-item {
+  background-color: $base;
+  color: $primary;
 }
 
 .desktop-nav .dropdown-menu .dropdown-item:hover {
-	background-color: $primary;
-	color: $base;
+  background-color: $primary;
+  color: $base;
 }
 
 .desktop-toggle.btn-secondary,
@@ -44,229 +45,241 @@ a {
 .desktop-toggle.btn-secondary:focus,
 .mobile-toggle.btn-secondary:focus,
 .mobile-toggle.btn-secondary:hover {
-	color: $primary;
-	background-color: $darkash;
-	border: none;
+  color: $primary;
+  background-color: $darkash;
+  border: none;
 }
 
 .mobile-toggle.btn-secondary,
-.mobile-toggle.btn-secondary:hover{
-	border: 1px solid $primary;
+.mobile-toggle.btn-secondary:hover {
+  border: 1px solid $primary;
 }
 
 .desktop-toggle.btn-secondary:hover,
 .desktop-toggle.btn-secondary.focused,
 .mobile-toggle.btn-secondary.focused {
-	color: $darkash;
-	background-color: $primary;
-	border: 1px solid $darkash;
+  color: $darkash;
+  background-color: $primary;
+  border: 1px solid $darkash;
 }
 
 .desktop-toggle.btn-secondary:focus,
 .mobile-toggle.btn-secondary:focus {
-	box-shadow: none;
+  box-shadow: none;
 }
 
-.desktop-sub-nav, .desktop-sub-nav button.desktop-toggle{
-	min-width: 100%;
+.desktop-sub-nav,
+.desktop-sub-nav button.desktop-toggle {
+  min-width: 100%;
 }
 
 .desktop-sub-nav .desktop-toggle-sub.btn-secondary,
-.item-link,
-{ 
-	background-color: $base;
-	color: $primary;
-	border: none;
-	border-radius: 0px !important;
+.item-link {
+  background-color: $base;
+  color: $primary;
+  border: none;
+  border-radius: 0px !important;
 }
 
 .desktop-sub-nav .desktop-toggle-sub.btn-secondary:hover,
-.item-link:hover { 
-	background-color: $primary;
-	color: $base ;
-	border: none;
-	border-bottom: 1px solid $fineash;
+.item-link:hover {
+  background-color: $primary;
+  color: $base;
+  border: none;
+  border-bottom: 1px solid $fineash;
 }
 
 .desktop-sub-nav .desktop-toggle-sub.btn-secondary a,
 .sub-item-link,
 .item-link {
-	font-size: 0.7em;
-	min-width: 100%;
+  font-size: 0.7em;
+  min-width: 100%;
 }
 
 .desktop-sub-nav .desktop-toggle-sub.btn-secondary:hover a,
 .desktop-sub-nav .dropdown-item a:hover {
-  color: $base ;
+  color: $base;
 }
 
-.dropdown-item, .desktop-toggle-sub {
-	border-top: 1px solid $fineash !important;
+.dropdown-item,
+.desktop-toggle-sub {
+  border-top: 1px solid $fineash !important;
 }
 
 .menu-inner {
-	border-bottom: 1px solid $fineash !important;
+  border-bottom: 1px solid $fineash !important;
 }
 
 .desktop-sub-nav .icon {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .mobile-nav {
-	position: relative;
+  position: relative;
 }
 
 .mobile-nav-body {
-	position: absolute;
-	top: 3.5em;
-	right: -0.75rem;
-	background-color: $darkash;
-	border-top: 1px solid $fineash;
+  position: absolute;
+  top: 3.5em;
+  right: -0.75rem;
+  background-color: $darkash;
+  border-top: 1px solid $fineash;
 
-	.mobile-nav-body-container{
-		position: relative;
-	  background-color: $darkash;
-	  min-width: 100vw;
-	  z-index: 10000;
-	  .card-header {
-	    background-color: $darkash;
-	    h6 {
-	    	font-size: 12px;
-	    }
-	    .icon {
-	    	font-size: 20px;
-	    	margin-right: 0.15em;
-	    }
-	  }
-	}
+  .mobile-nav-body-container {
+    position: relative;
+    background-color: $darkash;
+    min-width: 100vw;
+    z-index: 10000;
+    .card-header {
+      background-color: $darkash;
+      h6 {
+        font-size: 12px;
+      }
+      .icon {
+        font-size: 20px;
+        margin-right: 0.15em;
+      }
+    }
+  }
 }
 
 /* Hero Section */
 .custom-radial-bg {
-	background: radial-gradient(circle at 73% 50%, $base-brown, $base-brown 1%,$midnight 50%, $midnight 90%)
+  background: radial-gradient(
+    circle at 73% 50%,
+    $base-brown,
+    $base-brown 1%,
+    $midnight 50%,
+    $midnight 90%
+  );
 }
 
-.hero-image-container{
-	width: 100%;
-	max-width: 100%;
+.hero-image-container {
+  width: 100%;
+  max-width: 100%;
 
-	.hero-image {
-		max-width: 100%;
-	}	
+  .hero-image {
+    max-width: 100%;
+  }
 }
 
 .hero-image-absolute {
-	max-width: 100%;
-	opacity: 0.25;
-	pointer-events: none; 
+  max-width: 100%;
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .navbar-brand img {
-	width: 225px
+  width: 225px;
 }
 
 .hero-card {
-	background-color: $fineash;
-	max-width: 325px;
-	height: auto;
-	flex: 1;
-	border-radius: 33px;
+  background-color: $fineash;
+  max-width: 325px;
+  height: auto;
+  flex: 1;
+  border-radius: 33px;
 }
 
 .btn.cta-button {
-	background-color: $primary_data;
-	width: 90%;
-	margin: 0 auto;
+  background-color: $primary_data;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.text-primary-data{
-	color: $primary_data;
+.text-primary-data {
+  color: $primary_data;
 }
 
 .custom-layer-bg {
-	position: relative;
-	background-color: $darkash;
-	height: auto;
-	padding-bottom: 5%;
-	z-index: 0
+  position: relative;
+  background-color: $darkash;
+  height: auto;
+  padding-bottom: 5%;
+  z-index: 0;
 }
 
 .transition-layer-node {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	z-index: -1
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.transition-layer-node img{
-	position: relative;
-	margin: auto;
-	@include animation('translate-bg 360s linear 1');
-	height: 75%;
-	width: 75%;
+.transition-layer-node img {
+  position: relative;
+  margin: auto;
+  @include animation("translate-bg 360s linear 1");
+  height: 75%;
+  width: 75%;
 }
 
 .service-page {
-	.subheader {
-		background-color: $base_layer;
-		border-radius: 10px;
-	}
+  .subheader {
+    background-color: $base_layer;
+    border-radius: 10px;
+  }
 }
 
-.service-card{
-	background-color: $base_layer;
-	border-radius: 20px;
-	width: 100%;
-	max-width: 360px;
-	min-width: 310px;
+.service-card {
+  background-color: $base_layer;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 360px;
+  min-width: 310px;
 
-	.service-card-inner {
-		background-color: $darkash;
-		border-radius: 10px;
-		height: 98%;
-		display: flex;
-		flex-flow: column;
+  .service-card-inner {
+    background-color: $darkash;
+    border-radius: 10px;
+    height: 98%;
+    display: flex;
+    flex-flow: column;
 
-		.image-container {
-			overflow: hidden;
-			text-align: center;
-			position: relative;
-			width: 100%;
-			min-height: 150px;
-			border-top-left-radius: 10px;
-			border-top-right-radius: 10px;
-			border-bottom: 2px solid $secondary;
+    .image-container {
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      min-height: 150px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom: 2px solid $secondary;
 
-			img {
-				position: absolute;
-		    top: 0;
-		    bottom: 0;
-		    left: 0;
-		    right: 0;
-		    margin: auto;
-				width: 100%;
-			}
-		}
+      img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+      }
+    }
 
-		.description {
-			background-color: $base_layer;
-			border-radius: 10px;
-			flex: 1;
-		}
-	}
+    .description {
+      background-color: $base_layer;
+      border-radius: 10px;
+      flex: 1;
+    }
+  }
 }
 
 .contact-section {
-	background: linear-gradient(to bottom right, $base-brown 0%, $midnight 80%, $midnight 100% );
+  background: linear-gradient(
+    to bottom right,
+    $base-brown 0%,
+    $midnight 80%,
+    $midnight 100%
+  );
 
-	.section {
-		background-color: $base_layer;
-		border-radius: 10px;
-	}
+  .section {
+    background-color: $base_layer;
+    border-radius: 10px;
+  }
 }
 
 .footer {
@@ -275,93 +288,92 @@ a {
 }
 
 .rotate-up {
-	@include animation('rotate-up 0.6s ease 1 0s forwards');
+  @include animation("rotate-up 0.6s ease 1 0s forwards");
 }
 
 .rotate-down {
-	@include animation('rotate-down 0.6s ease 1 0s forwards');
+  @include animation("rotate-down 0.6s ease 1 0s forwards");
 }
 
 .preprocess-image {
-	min-height: 100%x;
-	max-width: 100%;
+  min-height: 100%x;
+  max-width: 100%;
 }
 
 .grid-lines {
-	.domain {
-	  stroke: transparent;
+  .domain {
+    stroke: transparent;
   }
-	line {
-		stroke: $fineash;
-	}
+  line {
+    stroke: $fineash;
+  }
 }
 
 .chart-page {
-	margin-top: 5em;
- 
-	.chart-viewbox {
-		background-color: $base;
-		border-radius: 10px;
-		padding: 1em;
-	}
+  margin-top: 5em;
 
+  .chart-viewbox {
+    background-color: $base;
+    border-radius: 10px;
+    padding: 1em;
+  }
 }
-.select-input{
-	.select-input-element{
-		color: $secondary !important;
-		border: none;
-		background-color: $fineash;
-		width: 100%;
-		border-radius: 10px;
+.select-input {
+  .select-input-element {
+    color: $secondary !important;
+    border: none;
+    background-color: $fineash;
+    width: 100%;
+    border-radius: 10px;
 
-		&:focus-visible {
-			outline: none;
-		}
-	}
+    &:focus-visible {
+      outline: none;
+    }
+  }
 }
 
 .desktop-table-container {
-	background-color: $fineash;
+  background-color: $fineash;
 }
 
 .table {
-	border-color: $base !important;
+  border-color: $base !important;
 }
 
-.table > :not(:first-child){
-	border-top: none !important;
+.table > :not(:first-child) {
+  border-top: none !important;
 }
 
 th {
-	color: $secondary;
-	padding: 1.15em 0.5em;
-	background-color: $darkash !important;
+  color: $secondary;
+  padding: 1.15em 0.5em;
+  background-color: $darkash !important;
 }
 
-div.tooltip {	
-    position: absolute;			
-    text-align: left;			
-    min-width: 30px;					
-    min-height: 30px;					
-    padding: 1.5em;		
-    background: $base;	
-    border: 0px;		
-    border-radius: 10px;			
-    pointer-events: none;
-    color: $secondary;
-    font-size: 0.7em;
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 1.5em;
+  background: $base;
+  border: 0px;
+  border-radius: 10px;
+  pointer-events: none;
+  color: $secondary;
+  font-size: 0.7em;
 }
 
 .bar-chart-container {
-	max-width: 850px !important;
+  max-width: 850px !important;
 }
 
-.modal-header{
-	border-bottom: 1px solid $primary !important;
+.modal-header {
+  border-bottom: 1px solid $primary !important;
 }
 
-button.close{
-	background-color: $primary;
+button.close {
+  background-color: $primary;
 }
 
 input[type="range"] {
@@ -375,84 +387,85 @@ input[type="range"] {
   --sx: calc(0.5 * 10px + var(--ratio) * (100% - 10px));
 
   &::-webkit-slider-runnable-track {
-  	-webkit-appearance: none;
-  	height: 0.7em;
-  	border-radius: 0.5rem;
-  	color: transparent;
-  	accent-color: #053a5f;
-  	backgorund: $fineash;
-	  background: linear-gradient($primary, $primary) 0/var(--sx) 100% no-repeat, $fineash;
-	}
+    -webkit-appearance: none;
+    height: 0.7em;
+    border-radius: 0.5rem;
+    color: transparent;
+    accent-color: #053a5f;
+    backgorund: $fineash;
+    background: linear-gradient($primary, $primary) 0 / var(--sx) 100% no-repeat,
+      $fineash;
+  }
 
-	&::-moz-range-track {
-		-moz-appearance: none;
-		height: 0.7em;
-		border-radius: 0.5rem;
-		color: transparent;
-		accent-color: #053a5f;
-	  background: $fineash;
-	}
+  &::-moz-range-track {
+    -moz-appearance: none;
+    height: 0.7em;
+    border-radius: 0.5rem;
+    color: transparent;
+    accent-color: #053a5f;
+    background: $fineash;
+  }
 
-	&::-webkit-slider-thumb{
-		-webkit-appearance: none;
-		margin-top: -0.15em;
-		width: 1em;
-		height: 1em;
-		background-color: $primary_data;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -0.15em;
+    width: 1em;
+    height: 1em;
+    background-color: $primary_data;
 
-		border: 1px solid $primary_data;
-		border-radius: 1rem;
-	} 
+    border: 1px solid $primary_data;
+    border-radius: 1rem;
+  }
 }
 
 .control-drawer {
-	width: 100%;
-	display: flex;
-	justify-content: end;
+  width: 100%;
+  display: flex;
+  justify-content: end;
 
-	&.show > button.btn-secondary.dropdown-toggle {
-		background-color: $fineash;
-		color: $secondary;
-		box-shadow: none;
-	}
+  &.show > button.btn-secondary.dropdown-toggle {
+    background-color: $fineash;
+    color: $secondary;
+    box-shadow: none;
+  }
 
-	button.btn-secondary:focus{
-		box-shadow: none;
-	}
+  button.btn-secondary:focus {
+    box-shadow: none;
+  }
 
-	button.btn-secondary {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		background-color: $fineash;
-		color: $secondary;
-		border: none;
-		padding: 0.25rem;
-		right: 0;
-		border-radius: 10px;
+  button.btn-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $fineash;
+    color: $secondary;
+    border: none;
+    padding: 0.25rem;
+    right: 0;
+    border-radius: 10px;
 
-		.svg-inline--fa.fa-w-14 {
-			font-size: 12px;
-			width: 1em;
-			font-weight: 100;
-		}
-	}
+    .svg-inline--fa.fa-w-14 {
+      font-size: 12px;
+      width: 1em;
+      font-weight: 100;
+    }
+  }
 
-	div.dropdown-control-drawer{
-		background-color: #282621 !important;
-		padding: 0.5em;
-	}
+  div.dropdown-control-drawer {
+    background-color: #282621 !important;
+    padding: 0.5em;
+  }
 }
 
 .chevron {
-    position:relative;
-    display:block;
-    height:6px; /*Height should be double border thickness*/
+  position: relative;
+  display: block;
+  height: 6px; /*Height should be double border thickness*/
 }
 
 .chevron::after {
-  content: ' ';
+  content: " ";
   display: inline-block;
   position: absolute;
   border-bottom: 0.1em solid $secondary;
@@ -463,4 +476,3 @@ input[type="range"] {
   width: 7px;
   transform: rotate(45deg);
 }
-

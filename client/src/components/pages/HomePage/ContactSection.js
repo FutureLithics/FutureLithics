@@ -51,7 +51,8 @@ const ContactSection = () => {
           <div className="section col-md-5 py-4 px-3 mt-4">
             <h3 className="mb-4">Schedule a Consultation</h3>
             <p className="mb-2">
-              Future Lithics LLC<br />
+              Future Lithics LLC
+              <br />
               Chad R. Denaux <br />
               Seneca, SC
             </p>

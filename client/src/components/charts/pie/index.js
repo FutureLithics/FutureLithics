@@ -1,5 +1,3 @@
-import PieChartComponent from './PieChartComponent';
+import PieChartComponent from "./PieChartComponent";
 
-export {
-	PieChartComponent
-}
+export { PieChartComponent };

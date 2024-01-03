@@ -1,17 +1,17 @@
 // Colors
 //base bg
 $base: #131312;
-$darkash: #21211F;
+$darkash: #21211f;
 $fineash: #48464155;
-$base-brown: #702B19;
-$midnight: #09172D;
+$base-brown: #702b19;
+$midnight: #09172d;
 
 //Primary
-$primary: #90F1C4;
-$primary_data:#25DD87;
+$primary: #90f1c4;
+$primary_data: #25dd87;
 
 //Secondary
-$secondary: #F8BA42;
+$secondary: #f8ba42;
 
 //warning
 $warning: $base-brown;
@@ -41,11 +41,11 @@ $base_layer: #13131277;
   padding: 20px;
 }
 
-.auth-nav{
+.auth-nav {
   margin-left: 20px;
 }
 
-.text-underline{
+.text-underline {
   text-decoration: underline !important;
 }
 
@@ -57,7 +57,7 @@ $base_layer: #13131277;
   margin-top: 7em;
 }
 
-.form-control, 
+.form-control,
 .form-control:focus,
 .focus-visible,
 input:-webkit-autofill,
@@ -73,12 +73,12 @@ textarea {
   resize: none;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-group:not(:last-child) > .btn{
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
   border-radius: 5px;
 }
-
 
 .card {
   background-color: $base;
@@ -88,4 +88,3 @@ textarea {
 .card-header {
   border-bottom: 1px solid $fineash;
 }
-
