@@ -1,19 +1,12 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: ["prettier", "eslint:recommended", "plugin:react/recommended"],
+  root: true,
+  extends: ['react-app'],
+  ignorePatterns: ['node_modules/**/*'],
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: "module",
-  },
-  plugins: ["react", "prettier"],
-  rules: {
-    "no-mixed-spaces-and-tabs": 1,
-    "no-unused-vars": 1,
-  },
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react']
+    }
+  }
 };
