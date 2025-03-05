@@ -38,7 +38,7 @@
     "sequelize": "6.7.0"
   },
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "devDependencies": {
     "eslint": "^7.32.0"
